@@ -7,7 +7,14 @@ add_program(model_test
         src/model.cpp)
 target_link_libraries(model_test ge211 catch)
 
+add_program(view_test
+        test/view_test.cpp
+        src/view.cpp)
+target_link_libraries(view_test ge211 catch)
+
 add_program(hexapawn
         src/hexapawn.cpp
-        src/model.cpp)
+        src/model.cpp
+        src/view.cpp
+        src/controller.cpp)
 target_link_libraries(hexapawn ge211)

@@ -3,7 +3,7 @@
 #include <ge211.h>
 #include <vector>
 
-namespace hexpawn {
+namespace hexapawn {
 
     enum class Player {
         white, black, neither
@@ -21,7 +21,7 @@ namespace hexpawn {
 
         //const std::vector<Player>& get_column(int col_no) const;
         void move_pawn(int, int, int, int);
-        bool is_good_spot(int col_no, int row_no) const;
+        bool is_good_spot(int, int, int, int) const;
         Player get_turn() const { return turn_; };
         Player get_winner() const { return winner_; };
 
@@ -42,7 +42,6 @@ namespace hexpawn {
 
         void update_winner_and_turn_(int col_no, int row_no);
 
-        bool is_good_space_(int, int, int, int) const;
     };
 
 }

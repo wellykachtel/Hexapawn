@@ -27,6 +27,58 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="model_test">
+				<Option output="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/model_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/kellywachtel/Documents/295-Personal/07/src"/>
+					<Add directory="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/ge211/src"/>
+					<Add directory="/Library/Frameworks/SDL2.framework/Headers"/>
+					<Add directory="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/ge211/3rdparty/utf8-cpp"/>
+					<Add directory="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/catch/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 model_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="model_test/fast">
+				<Option output="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/model_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/kellywachtel/Documents/295-Personal/07/src"/>
+					<Add directory="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/ge211/src"/>
+					<Add directory="/Library/Frameworks/SDL2.framework/Headers"/>
+					<Add directory="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/ge211/3rdparty/utf8-cpp"/>
+					<Add directory="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/catch/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 model_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug"/>
 				<Option type="4"/>
@@ -97,8 +149,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="model_test">
-				<Option output="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/model_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="view_test">
+				<Option output="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/view_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -117,14 +169,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 model_test"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 view_test"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="model_test/fast">
-				<Option output="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/model_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="view_test/fast">
+				<Option output="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/view_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -143,7 +195,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 model_test/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 view_test/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -309,26 +361,30 @@
 			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/ge211/3rdparty/utf8-cpp/utf8.h">
-			<Option target="hexapawn"/>
 			<Option target="model_test"/>
+			<Option target="hexapawn"/>
+			<Option target="view_test"/>
 			<Option target="ge211"/>
 			<Option target="fireworks"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/ge211/3rdparty/utf8-cpp/utf8/checked.h">
-			<Option target="hexapawn"/>
 			<Option target="model_test"/>
+			<Option target="hexapawn"/>
+			<Option target="view_test"/>
 			<Option target="ge211"/>
 			<Option target="fireworks"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/ge211/3rdparty/utf8-cpp/utf8/core.h">
-			<Option target="hexapawn"/>
 			<Option target="model_test"/>
+			<Option target="hexapawn"/>
+			<Option target="view_test"/>
 			<Option target="ge211"/>
 			<Option target="fireworks"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/ge211/3rdparty/utf8-cpp/utf8/unchecked.h">
-			<Option target="hexapawn"/>
 			<Option target="model_test"/>
+			<Option target="hexapawn"/>
+			<Option target="view_test"/>
 			<Option target="ge211"/>
 			<Option target="fireworks"/>
 		</Unit>
@@ -419,19 +475,38 @@
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/ge211/src/ge211_window.h">
 			<Option target="ge211"/>
 		</Unit>
+		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/controller.cpp">
+			<Option target="hexapawn"/>
+			<Option target="catch"/>
+		</Unit>
+		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/controller.h">
+			<Option target="catch"/>
+		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/hexapawn.cpp">
 			<Option target="hexapawn"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/model.cpp">
-			<Option target="hexapawn"/>
 			<Option target="model_test"/>
+			<Option target="hexapawn"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/model.h">
-			<Option target="hexapawn"/>
 			<Option target="model_test"/>
+			<Option target="hexapawn"/>
+		</Unit>
+		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/view.cpp">
+			<Option target="hexapawn"/>
+			<Option target="view_test"/>
+			<Option target="catch"/>
+		</Unit>
+		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/view.h">
+			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/test/model_test.cpp">
 			<Option target="model_test"/>
+		</Unit>
+		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/test/view_test.cpp">
+			<Option target="view_test"/>
+			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

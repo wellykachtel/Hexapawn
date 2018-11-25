@@ -1,7 +1,7 @@
 #include "model.h"
 #include <ge211.h>
 
-namespace hexpawn {
+namespace hexapawn {
 
     Player other_player(Player p)
     {
@@ -40,15 +40,18 @@ namespace hexpawn {
 
         if(get_space_(prev_row, prev_col) != turn_) return;
 
-
-
     }
 
     Player Model::get_space_(int row_no, int col_no) {
         return grid_.at(row_no).at(col_no);
     }
 
-    bool Model::is_good_space_(int prev_row, int prev_col, int new_row, int new_col) const {
+    void Model::update_winner_and_turn_(int col_no, int row_no) {
+        return;
+    }
 
+
+    bool Model::is_good_spot(int prev_row, int prev_col, int new_row, int new_col) const {
+        return true;
     }
 }

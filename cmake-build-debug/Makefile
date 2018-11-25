@@ -122,6 +122,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named model_test
+
+# Build rule for target.
+model_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 model_test
+.PHONY : model_test
+
+# fast build rule for target.
+model_test/fast:
+	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/build
+.PHONY : model_test/fast
+
+#=============================================================================
 # Target rules for targets named hexapawn
 
 # Build rule for target.
@@ -135,17 +148,17 @@ hexapawn/fast:
 .PHONY : hexapawn/fast
 
 #=============================================================================
-# Target rules for targets named model_test
+# Target rules for targets named view_test
 
 # Build rule for target.
-model_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 model_test
-.PHONY : model_test
+view_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 view_test
+.PHONY : view_test
 
 # fast build rule for target.
-model_test/fast:
-	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/build
-.PHONY : model_test/fast
+view_test/fast:
+	$(MAKE) -f CMakeFiles/view_test.dir/build.make CMakeFiles/view_test.dir/build
+.PHONY : view_test/fast
 
 #=============================================================================
 # Target rules for targets named catch
@@ -186,6 +199,33 @@ fireworks/fast:
 	$(MAKE) -f .ipd/lib/ge211/examples/CMakeFiles/fireworks.dir/build.make .ipd/lib/ge211/examples/CMakeFiles/fireworks.dir/build
 .PHONY : fireworks/fast
 
+src/controller.o: src/controller.cpp.o
+
+.PHONY : src/controller.o
+
+# target to build an object file
+src/controller.cpp.o:
+	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/controller.cpp.o
+.PHONY : src/controller.cpp.o
+
+src/controller.i: src/controller.cpp.i
+
+.PHONY : src/controller.i
+
+# target to preprocess a source file
+src/controller.cpp.i:
+	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/controller.cpp.i
+.PHONY : src/controller.cpp.i
+
+src/controller.s: src/controller.cpp.s
+
+.PHONY : src/controller.s
+
+# target to generate assembly for a file
+src/controller.cpp.s:
+	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/controller.cpp.s
+.PHONY : src/controller.cpp.s
+
 src/hexapawn.o: src/hexapawn.cpp.o
 
 .PHONY : src/hexapawn.o
@@ -219,8 +259,8 @@ src/model.o: src/model.cpp.o
 
 # target to build an object file
 src/model.cpp.o:
-	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/model.cpp.o
 	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/model.cpp.o
+	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/model.cpp.o
 .PHONY : src/model.cpp.o
 
 src/model.i: src/model.cpp.i
@@ -229,8 +269,8 @@ src/model.i: src/model.cpp.i
 
 # target to preprocess a source file
 src/model.cpp.i:
-	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/model.cpp.i
 	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/model.cpp.i
+	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/model.cpp.i
 .PHONY : src/model.cpp.i
 
 src/model.s: src/model.cpp.s
@@ -239,9 +279,39 @@ src/model.s: src/model.cpp.s
 
 # target to generate assembly for a file
 src/model.cpp.s:
-	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/model.cpp.s
 	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/src/model.cpp.s
+	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/model.cpp.s
 .PHONY : src/model.cpp.s
+
+src/view.o: src/view.cpp.o
+
+.PHONY : src/view.o
+
+# target to build an object file
+src/view.cpp.o:
+	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/view.cpp.o
+	$(MAKE) -f CMakeFiles/view_test.dir/build.make CMakeFiles/view_test.dir/src/view.cpp.o
+.PHONY : src/view.cpp.o
+
+src/view.i: src/view.cpp.i
+
+.PHONY : src/view.i
+
+# target to preprocess a source file
+src/view.cpp.i:
+	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/view.cpp.i
+	$(MAKE) -f CMakeFiles/view_test.dir/build.make CMakeFiles/view_test.dir/src/view.cpp.i
+.PHONY : src/view.cpp.i
+
+src/view.s: src/view.cpp.s
+
+.PHONY : src/view.s
+
+# target to generate assembly for a file
+src/view.cpp.s:
+	$(MAKE) -f CMakeFiles/hexapawn.dir/build.make CMakeFiles/hexapawn.dir/src/view.cpp.s
+	$(MAKE) -f CMakeFiles/view_test.dir/build.make CMakeFiles/view_test.dir/src/view.cpp.s
+.PHONY : src/view.cpp.s
 
 test/model_test.o: test/model_test.cpp.o
 
@@ -270,6 +340,33 @@ test/model_test.cpp.s:
 	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/test/model_test.cpp.s
 .PHONY : test/model_test.cpp.s
 
+test/view_test.o: test/view_test.cpp.o
+
+.PHONY : test/view_test.o
+
+# target to build an object file
+test/view_test.cpp.o:
+	$(MAKE) -f CMakeFiles/view_test.dir/build.make CMakeFiles/view_test.dir/test/view_test.cpp.o
+.PHONY : test/view_test.cpp.o
+
+test/view_test.i: test/view_test.cpp.i
+
+.PHONY : test/view_test.i
+
+# target to preprocess a source file
+test/view_test.cpp.i:
+	$(MAKE) -f CMakeFiles/view_test.dir/build.make CMakeFiles/view_test.dir/test/view_test.cpp.i
+.PHONY : test/view_test.cpp.i
+
+test/view_test.s: test/view_test.cpp.s
+
+.PHONY : test/view_test.s
+
+# target to generate assembly for a file
+test/view_test.cpp.s:
+	$(MAKE) -f CMakeFiles/view_test.dir/build.make CMakeFiles/view_test.dir/test/view_test.cpp.s
+.PHONY : test/view_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -277,22 +374,32 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... model_test"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... hexapawn"
-	@echo "... model_test"
+	@echo "... view_test"
 	@echo "... catch"
 	@echo "... ge211"
 	@echo "... fireworks"
+	@echo "... src/controller.o"
+	@echo "... src/controller.i"
+	@echo "... src/controller.s"
 	@echo "... src/hexapawn.o"
 	@echo "... src/hexapawn.i"
 	@echo "... src/hexapawn.s"
 	@echo "... src/model.o"
 	@echo "... src/model.i"
 	@echo "... src/model.s"
+	@echo "... src/view.o"
+	@echo "... src/view.i"
+	@echo "... src/view.s"
 	@echo "... test/model_test.o"
 	@echo "... test/model_test.i"
 	@echo "... test/model_test.s"
+	@echo "... test/view_test.o"
+	@echo "... test/view_test.i"
+	@echo "... test/view_test.s"
 .PHONY : help
 
 

@@ -4,6 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/kellywachtel/Documents/295-Personal/07/src/controller.cpp" "/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/.ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/src/controller.cpp.o"
+  "/Users/kellywachtel/Documents/295-Personal/07/src/view.cpp" "/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/.ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/src/view.cpp.o"
+  "/Users/kellywachtel/Documents/295-Personal/07/test/view_test.cpp" "/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/.ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/test/view_test.cpp.o"
   "/Users/kellywachtel/Documents/295-Personal/07/.ipd/lib/catch/src/catch-main.cpp" "/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/.ipd/lib/catch/CMakeFiles/catch.dir/src/catch-main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
