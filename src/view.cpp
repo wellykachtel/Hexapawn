@@ -6,19 +6,61 @@ namespace hexapawn {
         : model_(model)
     { }
 
-    void View::draw(ge211::Sprite_set& sprites, int mouse_row, int mouse_col) const {
+    void View::draw(ge211::Sprite_set& sprites, int selected_col, int selected_row, int mouse_col, int mouse_row) const {
 
-        for(int col = 0; col < model_.m(); ++col) {
-            for(int row = 0; row < model_.n(); ++row) {
+        if(model_.get_winner() == Player::white) {
+            sprites.add_sprite(winner_1_title_, {(screen_dimensions().width/2) - (winner_1_title_.dimensions().width/2), 5});
+        } else if (model_.get_winner() == Player::black) {
+            sprites.add_sprite(winner_2_title_, {(screen_dimensions().width/2) - (winner_2_title_.dimensions().width/2), 5});
+        } else {
+            sprites.add_sprite(title_, {(screen_dimensions().width / 2) - (title_.dimensions().width / 2), 5});
+        }
+
+        if(model_.get_turn() == Player::white) {
+            sprites.add_sprite(player_1_turn, {5, (margin_top - player_1_.dimensions().height)});
+        } else {
+            sprites.add_sprite(player_2_turn, {5, (screen_dimensions().height - margin_top)});
+        }
+        sprites.add_sprite(player_1_, {5, (margin_top - player_1_.dimensions().height)}, 1);
+        sprites.add_sprite(player_2_, {5, (screen_dimensions().height - margin_top)}, 1);
+
+        for(int col = 0; col < model_.c(); ++col) {
+            for(int row = 0; row < model_.r(); ++row) {
                 bool col_is_even = col%2 == 0;
                 bool row_is_even = row%2 == 0;
                 if(col_is_even && row_is_even) {
-                    sprites.add_sprite(white_square_, {square_dim.width*col, square_dim.height*row}, 0);
-                    std::cout << "white square at" << square_dim.width*col << " x " <<square_dim.height*row <<std::endl;
+                    sprites.add_sprite(white_square_, board_to_screen({col, row}), 0);
+                    //std::cout << "white square at" << square_dim.width*col << " x " <<square_dim.height*row <<std::endl;
+                } else if(!col_is_even && !row_is_even) {
+                    sprites.add_sprite(white_square_, board_to_screen({col, row}), 0);
+                    //std::cout << "white square at" << square_dim.width*col << " x " <<square_dim.height*row <<std::endl;
                 } else {
-                    sprites.add_sprite(black_square_, {square_dim.width*col, square_dim.height*row}, 0);
-                    std::cout << "black square at" << square_dim.width*col << " x " <<square_dim.height*row <<std::endl;
+                    sprites.add_sprite(black_square_, board_to_screen({col, row}), 0);
+                    //std::cout << "black square at" << square_dim.width*col << " x " <<square_dim.height*row <<std::endl;
                 }
+
+                Player player = model_.get_space(col, row);
+
+                if (selected_row == row && selected_col == col) {
+                    if(player == Player::white) {
+                        sprites.add_sprite(select_white_token_, board_to_screen({col, row}), 1);
+                    } else if (player == Player::black) {
+                        sprites.add_sprite(select_black_token_, board_to_screen({col, row}), 1);
+                    }
+                } else if(player == Player::white) {
+                    sprites.add_sprite(white_token_, board_to_screen({col, row}), 1);
+                } else if(player == Player::black) {
+                    sprites.add_sprite(black_token_, board_to_screen({col, row}), 1);
+                }
+            }
+        }
+
+       if (model_.is_good_spot(selected_col, selected_row, mouse_col, mouse_row)) {
+            Player player = model_.get_turn();
+            if(player == Player::white) {
+                sprites.add_sprite(possible_white_token_, board_to_screen({mouse_col, mouse_row}), 2);
+            } else if(player == Player::black) {
+                sprites.add_sprite(possible_black_token_, board_to_screen({mouse_col, mouse_row}), 2);
             }
         }
     }
@@ -26,23 +68,21 @@ namespace hexapawn {
 
     ge211::Position View::board_to_screen(ge211::Position board_pos) const
     {
-
-        //use Sprite.dimensions to get dimensions of a sprite
-        int x = 2 * square_dim.width * board_pos.x;
-        int y = 2 * square_dim.height * (model_.n() - board_pos.y - 1);
+        int x = square_dim.width * board_pos.x;
+        int y = margin_top + square_dim.height * (model_.r() - board_pos.y - 1);
         return {x, y};
     }
 
     ge211::Position View::screen_to_board(ge211::Position screen_pos) const
     {
-        int col_no = screen_pos.x / (2 * square_dim.width);
-        int row_no = model_.n() - screen_pos.y / (2 * square_dim.height) - 1;
+        int col_no = screen_pos.x / (square_dim.width);
+        int row_no = model_.r() - (screen_pos.y - margin_top) / (square_dim.height) - 1;
         return {col_no, row_no};
     }
 
     ge211::Dimensions View::screen_dimensions() const {
-        return {square_dim.width * model_.m(),
-                square_dim.height * model_.n()};
+        return { (square_dim.width * model_.c()),
+                margin_top + margin_bottom +(square_dim.height * model_.r())};
     }
 
 }

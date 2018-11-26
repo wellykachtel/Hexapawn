@@ -15,22 +15,24 @@ namespace hexapawn {
 
     class Model {
     public:
-        explicit Model(int m = 3, int n = 3);
-        int m() const { return m_; }
-        int n() const { return n_; }
+        explicit Model(int c = 3, int r = 3);
+        int c() const { return c_; }
+        int r() const { return r_; }
 
         //const std::vector<Player>& get_column(int col_no) const;
         void move_pawn(int, int, int, int);
         bool is_good_spot(int, int, int, int) const;
         Player get_turn() const { return turn_; };
         Player get_winner() const { return winner_; };
+        Player get_space(int, int) const;
+        bool more_moves();
 
     private:
 
         //m x n are the dimensions of the board (always a square)
         //m is the amount of pawns per player
-        int m_;
-        int n_;
+        int c_;
+        int r_;
 
         Player turn_ = Player::white;
         Player winner_ = Player::neither;
@@ -38,9 +40,7 @@ namespace hexapawn {
         //the board
         std::vector<std::vector<Player>> grid_;
 
-        Player get_space_(int, int);
-
-        void update_winner_and_turn_(int col_no, int row_no);
+        void update_winner_and_turn_(int row_no);
 
     };
 

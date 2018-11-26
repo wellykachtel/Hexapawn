@@ -23,5 +23,7 @@ private:
 
     int mouse_column_;
     int mouse_row_;
+    int selected_column_;
+    int selected_row_;
 };
 }
