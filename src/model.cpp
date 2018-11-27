@@ -15,13 +15,18 @@ namespace hexapawn {
     }
 
     Model::Model(int c, int r)
-        : c_(c), r_(r)
     {
+        if(c > 8) c = 8;
+        if(c < 3) c = 3;
+        if(r > 8) r = 8;
+        if(r < 3) r = 3;
+        c_ = c;
+        r_ = r;
         std::vector<Player> column;
-        while(column.size() < c) {
+        while(column.size() < r) {
             if(column.size() == 0) {
                 column.push_back(Player::black);
-            } else if(column.size() == c - 1) {
+            } else if(column.size() == r - 1) {
                 column.push_back(Player::white);
             } else {
                 column.push_back(Player::neither);
@@ -29,7 +34,7 @@ namespace hexapawn {
 
         }
 
-        while(grid_.size() < r) {
+        while(grid_.size() < c) {
             grid_.push_back(column);
         }
 
@@ -65,8 +70,8 @@ namespace hexapawn {
 
 
     bool Model::is_good_spot(int prev_col, int prev_row, int new_col, int new_row) const {
-        if(new_col < 0 || new_col > c_) return false;
-        if(new_row < 0 || new_row > r_) return false;
+        if(new_col < 0 || new_col >= c_) return false;
+        if(new_row < 0 || new_row >= r_) return false;
         Player player = turn_;
         Player new_space = get_space(new_col, new_row); //whether it is black, white, or neither
 
@@ -101,34 +106,20 @@ namespace hexapawn {
 
     bool Model::more_moves() {
 
+        turn_ = other_player(turn_);
+        int inc = (turn_ == Player::black) ? 1 : -1;
         bool result = false;
 
-        for(int col = 0; col < c_; ++col) {
-            for (int row = 0; row < r_; ++row) {
-                Player player = grid_[col][row];
-                if (player == Player::neither) continue;
-               /* result = result || (is_good_spot(col, row, col + 1, row)     ||
-                                   is_good_spot(col, row, col, row + 1)     ||
-                                   is_good_spot(col, row, col - 1, row)     ||
-                                   is_good_spot(col, row, col, row - 1)     ||
-                                   is_good_spot(col, row, col + 1, row + 1) ||
-                                   is_good_spot(col, row, col - 1, row - 1) ||
-                                   is_good_spot(col, row, col - 1, row + 1) ||
-                                   is_good_spot(col, row, col + 1, row - 1));*/
-
-                /*std::cout << "grid_[" << col << "][" << row << "] = " << is_good_spot(col, row, col + 1, row) << std::endl;
-                std::cout << "grid_[" << col << "][" << row << "] = " << is_good_spot(col, row, col, row + 1)  << std::endl;
-                std::cout << "grid_[" << col << "][" << row << "] = " << is_good_spot(col, row, col - 1, row) << std::endl;
-                std::cout << "grid_[" << col << "][" << row << "] = " << is_good_spot(col, row, col, row - 1) << std::endl;
-                std::cout << "grid_[" << col << "][" << row << "] = " << is_good_spot(col, row, col + 1, row + 1) << std::endl;
-                std::cout << "grid_[" << col << "][" << row << "] = " << is_good_spot(col, row, col - 1, row - 1) << std::endl;
-                std::cout << "grid_[" << col << "][" << row << "] = " << is_good_spot(col, row, col - 1, row + 1) << std::endl;
-                std::cout << "grid_[" << col << "][" << row << "] = " << is_good_spot(col, row, col + 1, row - 1) << std::endl;
-                std::cout << "****************************************************" << std::endl;*/
+        for(int row = 0; row < r(); ++row) {
+            for(int col = 0; col < c(); ++col) {
+                if (grid_[col][row] == Player::neither || grid_[col][row] == other_player(turn_)) continue;
+                result = result || (is_good_spot(col, row, col, row + inc) ||
+                                    is_good_spot(col, row, col + 1, row + inc) ||
+                                    is_good_spot(col, row, col - 1, row + inc));
             }
         }
-
-        std::cout << result << std::endl;
+        turn_ = other_player(turn_);
         return result;
+
     }
 }

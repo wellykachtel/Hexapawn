@@ -17,15 +17,15 @@ namespace hexapawn {
         }
 
         if(model_.get_turn() == Player::white) {
-            sprites.add_sprite(player_1_turn, {5, (margin_top - player_1_.dimensions().height)});
+            sprites.add_sprite(player_1_turn, {2, (margin_top - player_1_.dimensions().height)});
         } else {
-            sprites.add_sprite(player_2_turn, {5, (screen_dimensions().height - margin_top)});
+            sprites.add_sprite(player_2_turn, {2, (screen_dimensions().height - margin_top)});
         }
         sprites.add_sprite(player_1_, {5, (margin_top - player_1_.dimensions().height)}, 1);
         sprites.add_sprite(player_2_, {5, (screen_dimensions().height - margin_top)}, 1);
 
-        for(int col = 0; col < model_.c(); ++col) {
-            for(int row = 0; row < model_.r(); ++row) {
+        for(int row = 0; row < model_.r(); ++row) {
+            for(int col = 0; col < model_.c(); ++col) {
                 bool col_is_even = col%2 == 0;
                 bool row_is_even = row%2 == 0;
                 if(col_is_even && row_is_even) {

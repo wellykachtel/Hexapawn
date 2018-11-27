@@ -2,5 +2,5 @@
 
 int main()
 {
-    hexapawn::Controller().run();
+    hexapawn::Controller(8,8).run();
 }

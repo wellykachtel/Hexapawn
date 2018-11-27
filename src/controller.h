@@ -8,7 +8,7 @@ namespace hexapawn {
 class Controller : public ge211::Abstract_game
 {
 public:
-    explicit Controller(int m = 3);
+    explicit Controller(int c = 3, int r = 3);
 
 protected:
     ge211::Dimensions initial_window_dimensions() const override;
@@ -16,6 +16,7 @@ protected:
     void on_mouse_move(ge211::Position) override;
     void on_mouse_down(ge211::Mouse_button, ge211::Position) override;
     void draw(ge211::Sprite_set&) override;
+    void on_key(ge211::Key key) override;
 
 private:
     Model model_;

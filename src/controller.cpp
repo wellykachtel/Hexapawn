@@ -7,14 +7,14 @@ using namespace ge211;
 
 namespace hexapawn {
 
-    Controller::Controller(int m)
-        :model_(m, m)
+    Controller::Controller(int c, int r)
+        : model_(c, r)
         , view_(model_)
         , mouse_column_(-1)
         , mouse_row_(-1)
         , selected_column_(-1)
         , selected_row_(-1)
-    { }
+    {  }
 
     void Controller::draw(Sprite_set& set) {
         view_.draw(set, selected_column_, selected_row_, mouse_column_, mouse_row_);
@@ -52,5 +52,17 @@ namespace hexapawn {
         }
 
         //add last line
+    }
+
+
+    void Controller::on_key(Key key)
+    {
+        if (key == Key::code('q')) {
+            quit();
+        } else if (key == Key::code('f')) {
+            get_window().set_fullscreen(!get_window().get_fullscreen());
+        } else if (key == Key::code('r')) {
+
+        }
     }
 }

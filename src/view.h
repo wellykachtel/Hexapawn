@@ -9,9 +9,7 @@ namespace hexapawn {
     ge211::Color const black_square_color = ge211::Color::black();
     ge211::Color const player_indicate_color = ge211::Color::medium_blue().lighten(0.3);
 
-    ge211::Dimensions const square_dim = {150,150};
-    int const margin_top = square_dim.height;
-    int const margin_bottom = square_dim.height;
+
 
 
 
@@ -48,10 +46,16 @@ namespace hexapawn {
         ge211::Text_sprite const player_1_{"Player 1", sans20};
         ge211::Text_sprite const player_2_{"Player 2", sans20};
 
-        ge211::Rectangle_sprite const player_1_turn{player_1_.dimensions(), player_indicate_color};
-        ge211::Rectangle_sprite const player_2_turn{player_2_.dimensions(), player_indicate_color};
+        ge211::Rectangle_sprite const player_1_turn{{player_1_.dimensions().width + 6,
+                                                     player_1_.dimensions().height},
+                                                    player_indicate_color};
+        ge211::Rectangle_sprite const player_2_turn{{player_2_.dimensions().width + 6,
+                                                     player_2_.dimensions().height},
+                                                    player_indicate_color};
 
-
+        ge211::Dimensions const square_dim = white_token_.dimensions();
+        int const margin_top = square_dim.height;
+        int const margin_bottom = square_dim.height;
         ge211::Rectangle_sprite const white_square_{square_dim, white_square_color};
         ge211::Rectangle_sprite const black_square_{square_dim, black_square_color};
     };
