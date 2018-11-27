@@ -59,9 +59,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/model_test.dir/DependInfo.cmake"
   "CMakeFiles/hexapawn.dir/DependInfo.cmake"
-  "CMakeFiles/view_test.dir/DependInfo.cmake"
+  "CMakeFiles/model_test.dir/DependInfo.cmake"
   ".ipd/lib/catch/CMakeFiles/catch.dir/DependInfo.cmake"
   ".ipd/lib/ge211/CMakeFiles/ge211.dir/DependInfo.cmake"
   ".ipd/lib/ge211/examples/CMakeFiles/fireworks.dir/DependInfo.cmake"

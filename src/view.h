@@ -9,10 +9,6 @@ namespace hexapawn {
     ge211::Color const black_square_color = ge211::Color::black();
     ge211::Color const player_indicate_color = ge211::Color::medium_blue().lighten(0.3);
 
-
-
-
-
     class View
     {
     public:

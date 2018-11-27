@@ -65,44 +65,6 @@ CMAKE_SOURCE_DIR = /Users/kellywachtel/Documents/295-Personal/07
 CMAKE_BINARY_DIR = /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/model_test.dir
-
-# All Build rule for target.
-CMakeFiles/model_test.dir/all: .ipd/lib/catch/CMakeFiles/catch.dir/all
-CMakeFiles/model_test.dir/all: .ipd/lib/ge211/CMakeFiles/ge211.dir/all
-	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/depend
-	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/CMakeFiles --progress-num=26,27,28 "Built target model_test"
-.PHONY : CMakeFiles/model_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/model_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/model_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/CMakeFiles 21
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/model_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/model_test.dir/rule
-
-# Convenience name for target.
-model_test: CMakeFiles/model_test.dir/rule
-
-.PHONY : model_test
-
-# clean rule for target.
-CMakeFiles/model_test.dir/clean:
-	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/clean
-.PHONY : CMakeFiles/model_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/model_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/hexapawn.dir
 
 # All Build rule for target.
@@ -140,40 +102,40 @@ clean: CMakeFiles/hexapawn.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/view_test.dir
+# Target rules for target CMakeFiles/model_test.dir
 
 # All Build rule for target.
-CMakeFiles/view_test.dir/all: .ipd/lib/catch/CMakeFiles/catch.dir/all
-CMakeFiles/view_test.dir/all: .ipd/lib/ge211/CMakeFiles/ge211.dir/all
-	$(MAKE) -f CMakeFiles/view_test.dir/build.make CMakeFiles/view_test.dir/depend
-	$(MAKE) -f CMakeFiles/view_test.dir/build.make CMakeFiles/view_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/CMakeFiles --progress-num=29,30,31 "Built target view_test"
-.PHONY : CMakeFiles/view_test.dir/all
+CMakeFiles/model_test.dir/all: .ipd/lib/catch/CMakeFiles/catch.dir/all
+CMakeFiles/model_test.dir/all: .ipd/lib/ge211/CMakeFiles/ge211.dir/all
+	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/depend
+	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/CMakeFiles --progress-num=26,27,28,29,30 "Built target model_test"
+.PHONY : CMakeFiles/model_test.dir/all
 
 # Include target in all.
-all: CMakeFiles/view_test.dir/all
+all: CMakeFiles/model_test.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/view_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/CMakeFiles 21
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/view_test.dir/all
+CMakeFiles/model_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/CMakeFiles 23
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/model_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/view_test.dir/rule
+.PHONY : CMakeFiles/model_test.dir/rule
 
 # Convenience name for target.
-view_test: CMakeFiles/view_test.dir/rule
+model_test: CMakeFiles/model_test.dir/rule
 
-.PHONY : view_test
-
-# clean rule for target.
-CMakeFiles/view_test.dir/clean:
-	$(MAKE) -f CMakeFiles/view_test.dir/build.make CMakeFiles/view_test.dir/clean
-.PHONY : CMakeFiles/view_test.dir/clean
+.PHONY : model_test
 
 # clean rule for target.
-clean: CMakeFiles/view_test.dir/clean
+CMakeFiles/model_test.dir/clean:
+	$(MAKE) -f CMakeFiles/model_test.dir/build.make CMakeFiles/model_test.dir/clean
+.PHONY : CMakeFiles/model_test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/model_test.dir/clean
 
 .PHONY : clean
 

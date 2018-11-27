@@ -45,6 +45,7 @@ namespace hexapawn {
             throw ge211::Client_logic_error("move_pawn: game is over");
 
         if(get_space(prev_col, prev_row) != turn_) return;
+        if(!is_good_spot(prev_col,prev_row,new_col,new_row)) return;
 
         grid_[new_col][new_row] = turn_;
         grid_[prev_col][prev_row] = Player::neither;
