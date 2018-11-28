@@ -22,6 +22,8 @@ private:
     Model model_;
     View view_;
 
+    // since mouse click performs two options, selecting a pawn
+    // and actually moving it, we need to store both these "clicks"
     int mouse_column_;
     int mouse_row_;
     int selected_column_;

@@ -22,17 +22,19 @@ namespace hexapawn {
     private:
         Model const& model_;
 
-        // a token when it is just on the board
+        // a pawn when it is just on the board
         ge211::Image_sprite const white_token_{"whitepawn.png"};
         ge211::Image_sprite const black_token_{"blackpawn.png"};
 
-        //a token when it is selected to be moved
+        //a pawn when it is selected to be moved
         ge211::Image_sprite const select_white_token_{"whitepawn_selected.png"};
         ge211::Image_sprite const select_black_token_{"blackpawn_selected.png"};
 
+        // pawns with a lighter opacity to show possible moves when hovering
         ge211::Image_sprite const possible_white_token_{"possible_whitepawn.png"};
         ge211::Image_sprite const possible_black_token_{"possible_blackpawn.png"};
 
+        // Text sprites
         ge211::Font sans30{"sans.ttf", 30};
         ge211::Font sans20{"sans.ttf", 25};
 
@@ -42,6 +44,7 @@ namespace hexapawn {
         ge211::Text_sprite const player_1_{"Player 1", sans20};
         ge211::Text_sprite const player_2_{"Player 2", sans20};
 
+        //These highlight what user's turn it is
         ge211::Rectangle_sprite const player_1_turn{{player_1_.dimensions().width + 6,
                                                      player_1_.dimensions().height},
                                                     player_indicate_color};
@@ -50,8 +53,7 @@ namespace hexapawn {
                                                     player_indicate_color};
 
         ge211::Dimensions const square_dim = white_token_.dimensions();
-        int const margin_top = square_dim.height;
-        int const margin_bottom = square_dim.height;
+        int const margin = square_dim.height;
         ge211::Rectangle_sprite const white_square_{square_dim, white_square_color};
         ge211::Rectangle_sprite const black_square_{square_dim, black_square_color};
     };
