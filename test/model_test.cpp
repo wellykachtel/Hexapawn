@@ -1,5 +1,6 @@
 #include "model.h"
 #include <catch.h>
+#include <ge211.h>
 
 using namespace hexapawn;
 
@@ -51,7 +52,6 @@ TEST_CASE("Gameplay of a 3x3 Board")
     hexapawn.move_pawn(2, 2, 2, 1);
     CHECK(hexapawn.get_space(2,2) == Player::neither);
     CHECK(hexapawn.get_space(2,1) == Player::white);
-    CHECK(hexapawn.get_winner() == Player::white);
 
     hexapawn.move_pawn(0,1,1,2);
     CHECK(hexapawn.get_space(1,2) == Player::black);

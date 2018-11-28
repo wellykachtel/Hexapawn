@@ -320,17 +320,31 @@ close_code.h
 
 /Library/Frameworks/SDL2.framework/Headers/close_code.h
 
-/Users/kellywachtel/Documents/295-Personal/07/src/model.cpp
-model.h
-/Users/kellywachtel/Documents/295-Personal/07/src/model.h
+/Users/kellywachtel/Documents/295-Personal/07/src/controller.cpp
+controller.h
+/Users/kellywachtel/Documents/295-Personal/07/src/controller.h
 iostream
 -
+
+/Users/kellywachtel/Documents/295-Personal/07/src/controller.h
+model.h
+/Users/kellywachtel/Documents/295-Personal/07/src/model.h
+view.h
+/Users/kellywachtel/Documents/295-Personal/07/src/view.h
 ge211.h
 -
 
+/Users/kellywachtel/Documents/295-Personal/07/src/hexapawn.cpp
+controller.h
+/Users/kellywachtel/Documents/295-Personal/07/src/controller.h
+
+/Users/kellywachtel/Documents/295-Personal/07/src/model.h
+vector
+-
+
+/Users/kellywachtel/Documents/295-Personal/07/src/view.h
+model.h
 /Users/kellywachtel/Documents/295-Personal/07/src/model.h
 ge211.h
--
-vector
 -
 

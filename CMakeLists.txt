@@ -9,10 +9,11 @@ add_program(model_test
         src/controller.cpp)
 target_link_libraries(model_test ge211 catch)
 
-
 add_program(hexapawn
         src/hexapawn.cpp
         src/model.cpp
         src/view.cpp
         src/controller.cpp)
 target_link_libraries(hexapawn ge211)
+
+

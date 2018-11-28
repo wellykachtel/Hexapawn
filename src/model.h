@@ -1,6 +1,5 @@
 #pragma once
 
-#include <ge211.h>
 #include <vector>
 
 namespace hexapawn {

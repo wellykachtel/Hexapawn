@@ -422,10 +422,10 @@
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/controller.cpp">
 			<Option target="hexapawn"/>
 			<Option target="model_test"/>
-			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/controller.h">
-			<Option target="catch"/>
+			<Option target="hexapawn"/>
+			<Option target="model_test"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/hexapawn.cpp">
 			<Option target="hexapawn"/>
@@ -441,16 +441,13 @@
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/view.cpp">
 			<Option target="hexapawn"/>
 			<Option target="model_test"/>
-			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/src/view.h">
-			<Option target="catch"/>
+			<Option target="hexapawn"/>
+			<Option target="model_test"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/test/model_test.cpp">
 			<Option target="model_test"/>
-		</Unit>
-		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/test/view_test.cpp">
-			<Option target="catch"/>
 		</Unit>
 		<Unit filename="/Users/kellywachtel/Documents/295-Personal/07/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

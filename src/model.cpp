@@ -2,6 +2,7 @@
 #include <iostream>
 #include <ge211.h>
 
+
 namespace hexapawn {
 
     Player other_player(Player p)

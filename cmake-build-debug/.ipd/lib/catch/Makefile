@@ -136,87 +136,6 @@ catch/fast:
 	cd /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug && $(MAKE) -f .ipd/lib/catch/CMakeFiles/catch.dir/build.make .ipd/lib/catch/CMakeFiles/catch.dir/build
 .PHONY : catch/fast
 
-__/__/__/src/controller.o: __/__/__/src/controller.cpp.o
-
-.PHONY : __/__/__/src/controller.o
-
-# target to build an object file
-__/__/__/src/controller.cpp.o:
-	cd /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug && $(MAKE) -f .ipd/lib/catch/CMakeFiles/catch.dir/build.make .ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/src/controller.cpp.o
-.PHONY : __/__/__/src/controller.cpp.o
-
-__/__/__/src/controller.i: __/__/__/src/controller.cpp.i
-
-.PHONY : __/__/__/src/controller.i
-
-# target to preprocess a source file
-__/__/__/src/controller.cpp.i:
-	cd /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug && $(MAKE) -f .ipd/lib/catch/CMakeFiles/catch.dir/build.make .ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/src/controller.cpp.i
-.PHONY : __/__/__/src/controller.cpp.i
-
-__/__/__/src/controller.s: __/__/__/src/controller.cpp.s
-
-.PHONY : __/__/__/src/controller.s
-
-# target to generate assembly for a file
-__/__/__/src/controller.cpp.s:
-	cd /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug && $(MAKE) -f .ipd/lib/catch/CMakeFiles/catch.dir/build.make .ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/src/controller.cpp.s
-.PHONY : __/__/__/src/controller.cpp.s
-
-__/__/__/src/view.o: __/__/__/src/view.cpp.o
-
-.PHONY : __/__/__/src/view.o
-
-# target to build an object file
-__/__/__/src/view.cpp.o:
-	cd /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug && $(MAKE) -f .ipd/lib/catch/CMakeFiles/catch.dir/build.make .ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/src/view.cpp.o
-.PHONY : __/__/__/src/view.cpp.o
-
-__/__/__/src/view.i: __/__/__/src/view.cpp.i
-
-.PHONY : __/__/__/src/view.i
-
-# target to preprocess a source file
-__/__/__/src/view.cpp.i:
-	cd /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug && $(MAKE) -f .ipd/lib/catch/CMakeFiles/catch.dir/build.make .ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/src/view.cpp.i
-.PHONY : __/__/__/src/view.cpp.i
-
-__/__/__/src/view.s: __/__/__/src/view.cpp.s
-
-.PHONY : __/__/__/src/view.s
-
-# target to generate assembly for a file
-__/__/__/src/view.cpp.s:
-	cd /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug && $(MAKE) -f .ipd/lib/catch/CMakeFiles/catch.dir/build.make .ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/src/view.cpp.s
-.PHONY : __/__/__/src/view.cpp.s
-
-__/__/__/test/view_test.o: __/__/__/test/view_test.cpp.o
-
-.PHONY : __/__/__/test/view_test.o
-
-# target to build an object file
-__/__/__/test/view_test.cpp.o:
-	cd /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug && $(MAKE) -f .ipd/lib/catch/CMakeFiles/catch.dir/build.make .ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/test/view_test.cpp.o
-.PHONY : __/__/__/test/view_test.cpp.o
-
-__/__/__/test/view_test.i: __/__/__/test/view_test.cpp.i
-
-.PHONY : __/__/__/test/view_test.i
-
-# target to preprocess a source file
-__/__/__/test/view_test.cpp.i:
-	cd /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug && $(MAKE) -f .ipd/lib/catch/CMakeFiles/catch.dir/build.make .ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/test/view_test.cpp.i
-.PHONY : __/__/__/test/view_test.cpp.i
-
-__/__/__/test/view_test.s: __/__/__/test/view_test.cpp.s
-
-.PHONY : __/__/__/test/view_test.s
-
-# target to generate assembly for a file
-__/__/__/test/view_test.cpp.s:
-	cd /Users/kellywachtel/Documents/295-Personal/07/cmake-build-debug && $(MAKE) -f .ipd/lib/catch/CMakeFiles/catch.dir/build.make .ipd/lib/catch/CMakeFiles/catch.dir/__/__/__/test/view_test.cpp.s
-.PHONY : __/__/__/test/view_test.cpp.s
-
 src/catch-main.o: src/catch-main.cpp.o
 
 .PHONY : src/catch-main.o
@@ -254,15 +173,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... catch"
-	@echo "... __/__/__/src/controller.o"
-	@echo "... __/__/__/src/controller.i"
-	@echo "... __/__/__/src/controller.s"
-	@echo "... __/__/__/src/view.o"
-	@echo "... __/__/__/src/view.i"
-	@echo "... __/__/__/src/view.s"
-	@echo "... __/__/__/test/view_test.o"
-	@echo "... __/__/__/test/view_test.i"
-	@echo "... __/__/__/test/view_test.s"
 	@echo "... src/catch-main.o"
 	@echo "... src/catch-main.i"
 	@echo "... src/catch-main.s"

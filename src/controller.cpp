@@ -47,7 +47,6 @@ namespace hexapawn {
             selected_column_ = col_no;
             selected_row_ = row_no;
         } else if(model_.is_good_spot(selected_column_, selected_row_, col_no, row_no)) {
-            std::cout << model_.is_good_spot(selected_column_, selected_row_, col_no, row_no)<< std::endl;
             model_.move_pawn(selected_column_, selected_row_, col_no, row_no);
         }
 
